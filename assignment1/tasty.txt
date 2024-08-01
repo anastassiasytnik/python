@@ -1,0 +1,39 @@
+{
+  "https://tastedive.com/api/similarlimit-5_q-Tony Bennett": "
+	{\"Similar\": 
+		{\"Info\": [{\"Name\": \"Tony Bennett\", \"Type\": \"music\"}], 
+		 \"Results\": [{\"Name\": \"Doris Day\", \"Type\": \"music\"}, 
+				{\"Name\": \"Tommy Dorsey\", \"Type\": \"music\"}, 
+				{\"Name\": \"Boss\", \"Type\": \"music\"}, 
+				{\"Name\": \"Natalie Cole\", \"Type\": \"music\"}, 
+				{\"Name\": \"Artie Shaw\", \"Type\": \"music\"}]
+                }
+         }",
+  "https://tastedive.com/api/similarlimit-5_q-Black Panther_type-movies": "
+	{\"Similar\": 
+		{\"Info\": [{\"Name\": \"Black Panther\", \"Type\": \"movie\"}], 
+		 \"Results\": [{\"Name\": \"Captain Marvel\", \"Type\": \"movie\"}, 
+			       {\"Name\": \"Avengers: Infinity War\", \"Type\": \"movie\"}, 
+			       {\"Name\": \"Ant-Man And The Wasp\", \"Type\": \"movie\"}, 
+			       {\"Name\": \"The Fate Of The Furious\", \"Type\": \"movie\"}, 
+			       {\"Name\": \"Deadpool 2\", \"Type\": \"movie\"}]
+		}
+	}",
+  "https://tastedive.com/api/similarlimit-5_q-Sherlock Holmes_type-movies": 
+	"{\"Similar\": 
+		{\"Info\": [{\"Name\": \"Sherlock Holmes\", \"Type\": \"movie\"}], 
+		 \"Results\": [{\"Name\": \"Sherlock Holmes: A Game Of Shadows\", \"Type\": \"movie\"}, 
+			       {\"Name\": \"Yah\\u015fi Bat\\u0131\", \"Type\": \"movie\"}, 
+			       {\"Name\": \"Eyyvah Eyvah\", \"Type\": \"movie\"}, 
+			       {\"Name\": \"Pirates Of The Caribbean: On Stranger Tides\", \"Type\": \"movie\"}, 
+			       {\"Name\": \"Prince Of Persia: The Sands Of Time\", \"Type\": \"movie\"}
+                              ]
+		}
+	}",
+  "https://tastedive.com/api/similarq-Black Panther_type-movies": "{\"Similar\": {\"Info\": [{\"Name\": \"Black Panther\", \"Type\": \"movie\"}], \"Results\": [{\"Name\": \"Captain Marvel\", \"Type\": \"movie\"}, {\"Name\": \"Avengers: Infinity War\", \"Type\": \"movie\"}, {\"Name\": \"Ant-Man And The Wasp\", \"Type\": \"movie\"}, {\"Name\": \"The Fate Of The Furious\", \"Type\": \"movie\"}, {\"Name\": \"Deadpool 2\", \"Type\": \"movie\"}, {\"Name\": \"Jumanji: Welcome To The Jungle\", \"Type\": \"movie\"}, {\"Name\": \"Ready Player One\", \"Type\": \"movie\"}, {\"Name\": \"Ocean's 8\", \"Type\": \"movie\"}, {\"Name\": \"Solo: A Star Wars Story\", \"Type\": \"movie\"}, {\"Name\": \"Tag\", \"Type\": \"movie\"}, {\"Name\": \"Thor: Ragnarok\", \"Type\": \"movie\"}, {\"Name\": \"Venom\", \"Type\": \"movie\"}, {\"Name\": \"Pitch Perfect 3\", \"Type\": \"movie\"}, {\"Name\": \"Independence Day: Resurgence\", \"Type\": \"movie\"}, {\"Name\": \"The Divergent Series: Allegiant\", \"Type\": \"movie\"}, {\"Name\": \"Daddy's Home 2\", \"Type\": \"movie\"}, {\"Name\": \"The Greatest Showman\", \"Type\": \"movie\"}, {\"Name\": \"A Quiet Place\", \"Type\": \"movie\"}, {\"Name\": \"Game Night\", \"Type\": \"movie\"}, {\"Name\": \"Power Rangers\", \"Type\": \"movie\"}]}}",
+  "https://tastedive.com/api/similarlimit-5_q-Black Panther": "{\"Similar\": {\"Info\": [{\"Name\": \"Black Panther\", \"Type\": \"movie\"}], \"Results\": [{\"Name\": \"Captain Marvel\", \"Type\": \"movie\"}, {\"Name\": \"Avengers: Infinity War\", \"Type\": \"movie\"}, {\"Name\": \"Ant-Man And The Wasp\", \"Type\": \"movie\"}, {\"Name\": \"The Fate Of The Furious\", \"Type\": \"movie\"}, {\"Name\": \"Deadpool 2\", \"Type\": \"movie\"}]}}",
+  "https://tastedive.com/api/similarlimit-5_q-Tony Bennett_type-movies": "{\"Similar\": {\"Info\": [{\"Name\": \"Tony Bennett\", \"Type\": \"music\"}], \"Results\": [{\"Name\": \"The Startup Kids\", \"Type\": \"movie\"}, {\"Name\": \"Charlie Chaplin\", \"Type\": \"movie\"}, {\"Name\": \"Venus In Fur\", \"Type\": \"movie\"}, {\"Name\": \"Loving\", \"Type\": \"movie\"}, {\"Name\": \"The African Queen\", \"Type\": \"movie\"}]}}",
+  "https://tastedive.com/api/similarlimit-5_q-Bridesmaids_type-movies": "{\"Similar\": {\"Info\": [{\"Name\": \"Bridesmaids\", \"Type\": \"movie\"}], \"Results\": [{\"Name\": \"Baby Mama\", \"Type\": \"movie\"}, {\"Name\": \"The Five-Year Engagement\", \"Type\": \"movie\"}, {\"Name\": \"Bachelorette\", \"Type\": \"movie\"}, {\"Name\": \"The Heat\", \"Type\": \"movie\"}, {\"Name\": \"Date Night\", \"Type\": \"movie\"}]}}",
+  "https://tastedive.com/api/similarlimit-5_q-Captain Marvel_type-movies": "{\"Similar\": {\"Info\": [{\"Name\": \"Captain Marvel\", \"Type\": \"movie\"}], \"Results\": [{\"Name\": \"Inhumans\", \"Type\": \"movie\"}, {\"Name\": \"The Fate Of The Furious\", \"Type\": \"movie\"}, {\"Name\": \"Venom\", \"Type\": \"movie\"}, {\"Name\": \"American Assassin\", \"Type\": \"movie\"}, {\"Name\": \"Black Panther\", \"Type\": \"movie\"}]}}",
+  "https://tastedive.com/api/similarq-Black Panther": "{\"Similar\": {\"Info\": [{\"Name\": \"Black Panther\", \"Type\": \"movie\"}], \"Results\": [{\"Name\": \"Captain Marvel\", \"Type\": \"movie\"}, {\"Name\": \"Avengers: Infinity War\", \"Type\": \"movie\"}, {\"Name\": \"Ant-Man And The Wasp\", \"Type\": \"movie\"}, {\"Name\": \"The Fate Of The Furious\", \"Type\": \"movie\"}, {\"Name\": \"Deadpool 2\", \"Type\": \"movie\"}, {\"Name\": \"Jumanji: Welcome To The Jungle\", \"Type\": \"movie\"}, {\"Name\": \"Ready Player One\", \"Type\": \"movie\"}, {\"Name\": \"Ocean's 8\", \"Type\": \"movie\"}, {\"Name\": \"Solo: A Star Wars Story\", \"Type\": \"movie\"}, {\"Name\": \"Tag\", \"Type\": \"movie\"}, {\"Name\": \"Thor: Ragnarok\", \"Type\": \"movie\"}, {\"Name\": \"Venom\", \"Type\": \"movie\"}, {\"Name\": \"Pitch Perfect 3\", \"Type\": \"movie\"}, {\"Name\": \"Independence Day: Resurgence\", \"Type\": \"movie\"}, {\"Name\": \"The Divergent Series: Allegiant\", \"Type\": \"movie\"}, {\"Name\": \"Daddy's Home 2\", \"Type\": \"movie\"}, {\"Name\": \"The Greatest Showman\", \"Type\": \"movie\"}, {\"Name\": \"A Quiet Place\", \"Type\": \"movie\"}, {\"Name\": \"Game Night\", \"Type\": \"movie\"}, {\"Name\": \"Power Rangers\", \"Type\": \"movie\"}]}}",
+}

@@ -88,9 +88,10 @@ class GameEngine:
             f"Playing a game of WordyPy using the word list file of {word_list_file}.\nThe target word for this round is {target_word}\n"
         )
 
-        MAX_GUESSES = 6
+        MAX_GUESSES = 8
         for i in range(1, MAX_GUESSES):
             # ask the bot for it's guess and evaluate
+            print(f"*** TARGET WORD: {target_word}")
             guess: str = bot.make_guess()
 
             # print out a line indicating what the guess was

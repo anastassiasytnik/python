@@ -34,6 +34,14 @@ class Letter:
         # apparently the game engine doesn't set in_word flag if it's in correct place.
         return self.in_word or self.in_correct_place
 
+    def __str__(self):
+        state: str = "absent"
+        if (self.is_in_correct_place):
+            state = "correct"
+        elif (self.is_in_word):
+            state = "present, but not in position"
+        return f"{self.letter}({state})"
+
 class Bot:
     """ Represents a bot that can play guess word game.
 
@@ -50,7 +58,7 @@ class Bot:
         """ Reads the words from the file and creates a list of possible guesses """
         self.allWords = None
         with open(word_file, "r") as wFile:
-            self.allWords: List[str] = wFile.readlines()
+            self.allWords: List[str] = list(x.strip().upper() for x in wFile.readlines())
         #make a copy, because we will be removing words that the previous guesses eliminates
         self.word_list: List[str] = self.allWords[:]
         self.absentLetters: List[str] = []
@@ -61,6 +69,7 @@ class Bot:
     def make_guess(self) -> str:
         """ selects a word from list of words that haven't been disqualified yet by previous guesses"""
 
+        print(f"Length is {len(self.word_list)}. First is {self.word_list[0]}")
         return self.word_list[0]
     
     def record_guess_results(self, guess: str, guess_results: List[Letter]) -> None:
@@ -74,40 +83,63 @@ class Bot:
         idx: int = 0
         for letter in guess_results:
             if (not letter.is_in_word()):
-                self.absentLetters.append(letter)
-            elif (letter.is_in_correct_place):
+                self.absentLetters.append(letter.letter)
+            elif (letter.is_in_correct_place()):
                 self.correctLetters[idx] = letter.letter
             elif (letter.letter not in self.presentLetters):
                 self.presentLetters.append(letter.letter)
             idx += 1
+
+        print(f"Absent: {self.absentLetters}")
+        print(f"Present: {self.presentLetters}")
+        print(f"Correct: {self.correctLetters}")
         wordIdx: int = 0 #That was our last guess. It's not the word if we haven't got all 5 in self.correctLetters
         if (5 == len(self.correctLetters)):
             return #Nothing to do - we guessed the word.
         
         # Now if it wasn't a correct word - remove it
         del(self.word_list[0])
-
+        print("Deleted previous guess")
+        # TODO remove
+        count = 0
+        report: List[str] = []
         # Go through words, deleting invalid ones until we find 1st word that fits
-        for word in self.word_list:
+        found: bool = False
+        while not found:
+            word = self.word_list[0]
+            count += 1
+            if (count % 20 == 0):
+                print(f"These words have been rejected{report}")
+                report = []
+                boo = input("continue..")
+            failed: bool = False
             # should contain all "correct" letters in their places
             for idx in self.correctLetters:
                 if (word[idx] != self.correctLetters[idx]):
                     #doesn't have a letter we guessed already in a correct spot - remove
-                    print(f"Word {word} is invalid because it doesn't have {self.correctLetters[idx]} letter in position {idx}")
+                    report.append(word)
                     del(self.word_list[wordIdx])
-                    continue # get next word, as this was already disqualified and removed
+                    failed = True
+                    break
+            if failed: continue # get next word, as this was already disqualified and removed
             # should contain all present letters
             for ch in self.presentLetters:
                 if (ch not in word):
-                    print(f"Word {word} is invalid, because it doesn't contain letter {ch}")
+                    report.append(word)
                     del(self.word_list[wordIdx])
-                    continue # get next word, as this was already disqualified and removed
+                    failed = True
+                    break
+            if failed: continue # get next word, as this was already disqualified and removed
             # should NOT contain all absent letters
             for ch in self.absentLetters:
                 if (ch in word):
-                    print(f"Word {word} is invalid because it contains letter {ch}, which is not in the target word")
+                    report.append(word)
                     del(self.word_list[wordIdx])
-                    continue # get next word, as this was already disqualified and removed
+                    failed = True
+                    break
+            if failed: continue # get next word, as this was already disqualified and removed
             # this word doesn't contradict all previous guesses validation - we found our next guess
+            print(f"These words have been rejected: {report}")
             print(f"Found next guess: {word}")
-            break
+
+            found = True

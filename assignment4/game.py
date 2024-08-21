@@ -1,5 +1,7 @@
 from PIL import Image, ImageFont, ImageDraw
 import random
+from displaySpecs import DisplaySpecification
+from bot import Letter, Bot
 
 
 class GameEngine:
@@ -110,7 +112,7 @@ class GameEngine:
             img = self._format_results(results)
 
             print(f"Sending guess results to bot:\n")
-            display(img)
+            img.show()
 
             bot.record_guess_results(guess, img)
 
@@ -223,9 +225,10 @@ if __name__ == "__main__":
     favorite_words = ["doggy", "drive", "daddy", "field", "state"]
 
     # Write this to a temporary file
-    words_file = "temp_file.txt"
-    with open(words_file, "w") as file:
-        file.writelines("\n".join(favorite_words))
+    #words_file = "temp_file.txt"
+    #with open(words_file, "w") as file:
+    #    file.writelines("\n".join(favorite_words))
+    words_file = "words.txt"
 
     # Create a new GameEngine with the default DisplaySpecification
     ge = GameEngine()

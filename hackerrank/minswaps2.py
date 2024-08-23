@@ -17,6 +17,7 @@ def minimumSwaps(arr):
         # either end of the array or found the element out of place
         if (len(arr) == pointIdx):
             return swapCount
+        # at this point we KNOW we need to swap
         pointNum = arr[pointIdx]
         arr[pointIdx] = arr[pointNum - 1]
         arr[pointNum - 1] = pointNum

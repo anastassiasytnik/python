@@ -76,8 +76,12 @@ def get_board_state(
     made). The board state will follow the rules of WordyPy.
 
     Args:
-        target_word_debug: Optional, a string representing the target word. This defaults to None, and the autograder will not have this parameter, it is only for testing a specific target word.
-        guess_words_debug: Optional, a list of strings representing the guess words. This defaults to None, and the autograder will not have this parameter, it is only for testing specific word guess combinations.
+        target_word_debug: Optional, a string representing the target word.
+                           This defaults to None, and the autograder will not have this parameter,
+                           it is only for testing a specific target word.
+        guess_words_debug: Optional, a list of strings representing the guess words.
+                           This defaults to None, and the autograder will not have this parameter,
+                           it is only for testing specific word guess combinations.
     """
 
     global __last_target_word
@@ -191,6 +195,7 @@ def make_guess(guess: str) -> bool:
         print(f"Guess: {guess}")
         print(f"Last Target Word: {__last_target_word}")
         print(f"Last Guesses: {__last_guesses}")
+        print(f"Known_pattern: {__known_pattern}")
 
     if __last_target_word == None:
         raise ValueError(
